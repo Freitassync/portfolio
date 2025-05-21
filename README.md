@@ -109,8 +109,6 @@ npm run deploy
 
 [🔗 Clique aqui para acessar via GitHub Pages](https://freitassync.github.io/portfolio)
 
-> Substitua `seu-repositorio` pelo nome real do repositório para gerar o link correto.
-
 ---
 
 ## ✨ Autor
