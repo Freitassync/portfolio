@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# Portfólio Pessoal - Gabriel Da Silva Freitas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é meu portfólio profissional desenvolvido com **React (Create React App)**, com foco em apresentar minhas habilidades como Desenvolvedor Front End e Analista de BI. O projeto é uma Single Page Application (SPA) com navegação dinâmica e layout responsivo.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tecnologias Utilizadas
 
-### `npm start`
+- [React](https://reactjs.org/)
+- [Create React App](https://create-react-app.dev/)
+- [React Router DOM](https://reactrouter.com/)
+- [EmailJS](https://www.emailjs.com/)
+- [GitHub Pages](https://pages.github.com/)
+- CSS Puro
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Estrutura do Projeto
 
-### `npm test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+public/
+├── android-chrome-*.png   # Ícones para dispositivos Android
+├── apple-touch-icon.png   # Ícone para iOS
+├── favicon.*              # Favicon do site
+├── index.html             # HTML principal
+├── manifest.json          # Manifesto PWA
+└── site.webmanifest       # Manifesto web
 
-### `npm run build`
+src/
+├── assets/                # Imagens do portfólio
+│   ├── Mindfit.png
+│   └── Portfolio.png
+├── components/            # Componentes reutilizáveis
+│   ├── Footer.jsx
+│   └── Navbar.jsx
+├── pages/                 # Páginas principais
+│   ├── Contato.jsx
+│   ├── Home.jsx
+│   ├── Projetos.jsx
+│   └── Sobre.jsx
+├── App.jsx                # Definição de rotas da SPA
+├── index.css              # Estilos globais com CSS puro
+└── index.js               # Ponto de entrada da aplicação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+````
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧭 Funcionalidades
 
-### `npm run eject`
+- 🌐 Navegação entre páginas com React Router (SPA)
+- 📬 Formulário de contato com envio via EmailJS
+- 📱 Layout responsivo com CSS puro
+- 🚀 Deploy gratuito via GitHub Pages
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Instalação e Execução Local
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone o repositório:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/Freitassync/seu-repositorio.git
+cd seu-repositorio
+````
 
-## Learn More
+2. Instale as dependências:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Inicie o servidor local:
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📦 Deploy no GitHub Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Instale o pacote:
 
-### Making a Progressive Web App
+```bash
+npm install --save gh-pages
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Configure o `package.json`:
 
-### Advanced Configuration
+```json
+"homepage": "https://freitassync.github.io/seu-repositorio",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. Realize o deploy:
 
-### Deployment
+```bash
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🌐 Acesse o projeto online
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[🔗 Clique aqui para acessar via GitHub Pages](https://freitassync.github.io/portfolio)
+
+> Substitua `seu-repositorio` pelo nome real do repositório para gerar o link correto.
+
+---
+
+## ✨ Autor
+
+**Gabriel Da Silva Freitas**
+[LinkedIn](https://www.linkedin.com/in/freitasbtw) • [GitHub](https://github.com/Freitassync)
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
