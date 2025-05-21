@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-  import projeto1Img from '../assets/projeto1.png';
-  import projeto2Img from '../assets/projeto2.png';
+  import Mindfit from '../assets/Mindfit.png';
+  import Portfolio from '../assets/Portfolio.png';
 
   function Projetos() {
     const projetos = [
@@ -9,14 +9,14 @@ import { motion } from 'framer-motion';
         nome: 'Portfólio Pessoal',
         descricao: 'Um portfólio web moderno construído com React e CSS puro.',
         link: 'https://github.com/Freitassync/portfolio',
-        imagem: projeto1Img,
+        imagem: Portfolio,
       },
       {
         id: 2,
-        nome: 'Dashboard BI',
-        descricao: 'Dashboard interativo para análise de dados com Power BI.',
-        link: 'https://github.com/Freitassync/dashboard',
-        imagem: projeto2Img,
+        nome: 'Mindfit',
+        descricao: 'App fitness construído com Kotlin',
+        link: 'https://github.com/Freitassync/Mindfit',
+        imagem: Mindfit,
       },
     ];
 
