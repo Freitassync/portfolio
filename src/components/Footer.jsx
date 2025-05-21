@@ -1,13 +1,19 @@
-function Footer() {
-  return (
-    <footer>
-      <p>© 2025 Gabriel Da Silva Freitas. Todos os direitos reservados.</p>
-      <div>
-        <a href="https://www.linkedin.com/in/freitasbtw">LinkedIn</a>
-        <a href="https://github.com/Freitassync">GitHub</a>
-      </div>
-    </footer>
-  );
-}
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
-export default Footer;
+  function Footer() {
+    return (
+      <footer>
+        <p>© 2025 Gabriel Da Silva Freitas. Todos os direitos reservados.</p>
+        <div className="social-links">
+          <a href="https://www.linkedin.com/in/freitasbtw" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={24} />
+          </a>
+          <a href="https://github.com/Freitassync" target="_blank" rel="noopener noreferrer">
+            <FaGithub size={24} />
+          </a>
+        </div>
+      </footer>
+    );
+  }
+
+  export default Footer;
