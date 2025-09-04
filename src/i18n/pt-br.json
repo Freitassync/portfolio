@@ -1,0 +1,64 @@
+{
+  "introduction": {
+    "title": "Olá, eu sou Gabriel Da Silva Freitas",
+    "greeting": "Bem-vindo ao meu portfólio",
+    "name": "Gabriel Da Silva Freitas",
+    "age": "20 anos",
+    "birthDate": "Nascido em 30 de outubro de 2004",
+    "profession": "Analista de Business Intelligence",
+    "company": "JBS",
+    "education": "Estudante de Sistemas de Informação na FIAP",
+    "bio": "Me chamo Gabriel, tenho 20 anos, atuo como Analista de Business Intelligence na JBS, onde me dedico à análise de dados e à geração de insights estratégicos, utilizando a ferramenta QlikSense para desenvolver soluções orientadas a resultados.",
+    "bio2": "Cursando Sistemas de Informação na FIAP, aprimoro competências em tecnologia, gestão de dados e inovação, com o objetivo de impulsionar o desempenho organizacional."
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "subtitle": "Analista de Dados & Desenvolvedor"
+  },
+  "projects": {
+    "title": "Meu Projeto em Destaque",
+    "subtitle": "Aqui está o meu principal projeto do qual tenho mais orgulho",
+    "viewProject": "Ver Projeto",
+    "viewCode": "Ver Código",
+    "mindfit": {
+      "title": "Mindfit",
+      "description": "Mindfit é um aplicativo desenvolvido em React Native para promover saúde física, mental e bem-estar, alinhado à visão da Sociedade 5.0. Utilizando inteligência artificial, o Mindfit oferece uma experiência personalizada, com foco em atividade física, nutrição e equilíbrio emocional. Projeto desenvolvido como parte da Fase 3 do curso de Sistemas de Informação da FIAP."
+    }
+  },
+  "skills": {
+    "title": "Habilidades & Tecnologias",
+    "dataAnalysis": "Análise de Dados",
+    "businessIntelligence": "Business Intelligence",
+    "qlikSense": "QlikSense",
+    "webDevelopment": "Desenvolvimento Web",
+    "react": "React",
+    "typescript": "TypeScript"
+  },
+  "contact": {
+    "title": "Vamos Conversar",
+    "subtitle": "Sinta-se à vontade para entrar em contato",
+    "email": "Entre em contato"
+  },
+  "socialMedia": {
+    "title": "Me Siga",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "github": "GitHub"
+  },
+  "languageSwitcher": {
+    "label": "Idioma",
+    "english": "English",
+    "portuguese": "Português"
+  },
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "seeProject": "Ver Projeto",
+  "viewCode": "Ver Código",
+  "clickToExpand": "Clique para expandir",
+  "technologiesUsed": "Tecnologias Utilizadas"
+}

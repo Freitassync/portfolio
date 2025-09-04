@@ -1,0 +1,68 @@
+{
+  "introduction": {
+    "title": "Hi, I'm Gabriel Da Silva Freitas",
+    "greeting": "Welcome to my portfolio",
+    "name": "Gabriel Da Silva Freitas",
+    "age": "20 years old",
+    "birthDate": "Born October 30, 2004",
+    "profession": "Business Intelligence Analyst",
+    "company": "JBS",
+    "education": "Information Systems Student at FIAP",
+    "bio": "My name is Gabriel, I am 20 years old, and I work as a Business Intelligence Analyst at JBS, where I focus on data analysis and generating strategic insights, using QlikSense to develop results-oriented solutions.",
+    "bio2": "I am studying Information Systems at FIAP, enhancing my skills in technology, data management, and innovation, aiming to boost organizational performance."
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Data Analyst & Developer"
+  },
+  "clickToExpand": "Click to expand",
+  "technologiesUsed": "Technologies Used",
+  "project": {
+    "title": "My Featured Project",
+    "subtitle": "Here's my main project that I'm most proud of",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "mindfit": {
+      "title": "Mindfit",
+      "description": "Mindfit is a React Native application developed to promote physical, mental health and well-being, aligned with the Society 5.0 vision. Using artificial intelligence, Mindfit offers a personalized experience, focusing on physical activity, nutrition and emotional balance. This project was developed as part of Phase 3 of the Information Systems course at FIAP."
+    }
+  },
+  "projects": {
+    "title": "My Featured Project",
+    "subtitle": "Here's my main project that I'm most proud of"
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "dataAnalysis": "Data Analysis",
+    "businessIntelligence": "Business Intelligence",
+    "qlikSense": "QlikSense",
+    "webDevelopment": "Web Development",
+    "react": "React",
+    "typescript": "TypeScript"
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "subtitle": "Feel free to reach out to me",
+    "email": "Contact me"
+  },
+  "socialMedia": {
+    "title": "Follow Me",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "github": "GitHub"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "english": "English",
+    "portuguese": "Português"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "seeProject": "See Project",
+  "viewCode": "View Code"
+}
