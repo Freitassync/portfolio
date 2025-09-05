@@ -32,7 +32,7 @@ const SocialLink = styled(motion.a)`
   justify-content: center;
   width: 60px;
   height: 60px;
-  background: white;
+  background: ${({ theme }) => theme.colors.surface};
   border-radius: ${({ theme }) => theme.borderRadius.full};
   box-shadow: ${({ theme }) => theme.shadows.md};
   color: ${({ theme }) => theme.colors.text.secondary};

@@ -62,7 +62,7 @@ const InfoCards = styled(motion.div)`
 `;
 
 const InfoCard = styled(motion.div)`
-  background: white;
+  background: ${({ theme }) => theme.colors.surface};
   border-radius: ${({ theme }) => theme.borderRadius.lg};
   padding: ${({ theme }) => theme.spacing.lg};
   box-shadow: ${({ theme }) => theme.shadows.md};

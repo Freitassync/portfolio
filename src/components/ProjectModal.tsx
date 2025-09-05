@@ -51,7 +51,7 @@ const Overlay = styled(motion.div)`
 `;
 
 const ModalContainer = styled(motion.div)`
-  background: white;
+  background: ${({ theme }) => theme.colors.background};
   border-radius: ${({ theme }) => theme.borderRadius.xl};
   box-shadow: ${({ theme }) => theme.shadows.xl};
   max-width: 800px;
@@ -103,7 +103,7 @@ const ProjectImageLarge = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: white;
+  background: ${({ theme }) => theme.colors.surface};
   padding: ${({ theme }) => theme.spacing.lg};
   border-radius: ${({ theme }) => theme.borderRadius.xl} ${({ theme }) => theme.borderRadius.xl} 0 0;
 `;

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import ThemeToggle from './ThemeToggle';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const NavbarContainer = styled(motion.nav)<{ isScrolled: boolean }>`
   position: fixed;
@@ -10,7 +12,7 @@ const NavbarContainer = styled(motion.nav)<{ isScrolled: boolean }>`
   right: 0;
   z-index: 1000;
   background: ${({ theme, isScrolled }) => 
-    isScrolled ? 'rgba(255, 255, 255, 0.95)' : 'transparent'};
+    isScrolled ? `${theme.colors.background}95` : 'transparent'};
   backdrop-filter: ${({ isScrolled }) => isScrolled ? 'blur(10px)' : 'none'};
   border-bottom: ${({ theme, isScrolled }) => 
     isScrolled ? `1px solid ${theme.colors.border}` : 'none'};
@@ -39,11 +41,21 @@ const Logo = styled(motion.div)`
 
 const NavLinks = styled.div`
   display: flex;
-  gap: ${({ theme }) => theme.spacing.lg};
+  gap: ${({ theme }) => theme.spacing.sm};
   align-items: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: none;
+  }
+`;
+
+const NavControls = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.sm};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    gap: ${({ theme }) => theme.spacing.xs};
   }
 `;
 
@@ -87,14 +99,12 @@ const MobileMenu = styled(motion.div)<{ isOpen: boolean }>`
   top: 100%;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(10px);
+  background: ${({ theme }) => theme.colors.background};
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
-  padding: ${({ theme }) => theme.spacing.lg};
-  display: ${({ isOpen }) => isOpen ? 'flex' : 'none'};
+  padding: ${({ theme }) => theme.spacing.md};
+  display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.md};
-  box-shadow: ${({ theme }) => theme.shadows.lg};
+  gap: ${({ theme }) => theme.spacing.sm};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: none;
@@ -117,6 +127,15 @@ const MobileNavLink = styled(motion.a)`
   }
 `;
 
+const MobileControls = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: ${({ theme }) => theme.spacing.sm};
+  border-top: 1px solid ${({ theme }) => theme.colors.border};
+  margin-top: ${({ theme }) => theme.spacing.sm};
+`;
+
 const Navbar: React.FC = () => {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -128,17 +147,14 @@ const Navbar: React.FC = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    const handleScrollSections = () => {
+    const updateActiveSection = () => {
       const sections = ['home', 'about', 'skills', 'projects', 'contact'];
-      const scrollPosition = window.scrollY + 100;
-
+      
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
-          const offsetTop = element.offsetTop;
-          const height = element.offsetHeight;
-          
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + height) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
             setActiveSection(section);
             break;
           }
@@ -147,18 +163,22 @@ const Navbar: React.FC = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('scroll', handleScrollSections);
+    window.addEventListener('scroll', updateActiveSection);
     
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('scroll', handleScrollSections);
+      window.removeEventListener('scroll', updateActiveSection);
     };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const offsetTop = element.offsetTop - 80;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
     }
     setIsMobileMenuOpen(false);
   };
@@ -201,12 +221,16 @@ const Navbar: React.FC = () => {
           ))}
         </NavLinks>
 
-        <MobileMenuButton
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          whileTap={{ scale: 0.95 }}
-        >
-          ☰
-        </MobileMenuButton>
+        <NavControls>
+          <ThemeToggle />
+          <LanguageSwitcher />
+          <MobileMenuButton
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            whileTap={{ scale: 0.95 }}
+          >
+            ☰
+          </MobileMenuButton>
+        </NavControls>
       </NavContent>
 
       <MobileMenu
@@ -232,6 +256,11 @@ const Navbar: React.FC = () => {
             {item.label}
           </MobileNavLink>
         ))}
+        
+        <MobileControls>
+          <ThemeToggle />
+          <LanguageSwitcher />
+        </MobileControls>
       </MobileMenu>
     </NavbarContainer>
   );
