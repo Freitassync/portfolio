@@ -1,4 +1,4 @@
-# 💼 Gabriel Da Silva Freitas - Portfolio
+# [💼 Gabriel Da Silva Freitas - Portfolio](https://freitasbtw.netlify.app)
 
 > Um portfólio moderno e responsivo desenvolvido em React com TypeScript, showcaseando minha experiência como Analista de Business Intelligence e desenvolvedor.
 
